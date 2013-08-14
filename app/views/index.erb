@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Welcome to JavaScript Racer!</h1>
+
+  <% if @game %>
+    <div id ="myModal" class="reveal-modal">
+      <h1>Here are your results!</h1>
+      <p><%= "#{@game.winner} won this game in #{@game.time} seconds!" %></p>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+  <% end %>
+
+  <p><i>The most basic JS racer in existence</i></p>
+
+  <form action="/start" method="post">
+    <label for="player1">Player 1, enter your name!</label>
+    <input type="text" name="player1" placeholder="Player One">
+    <br><br>
+    <label for="player2">Player 2, you too!</label>
+    <input type="text" name="player2" placeholder="Player Two">
+    <input type="submit" value="Go!">
+  </form>
+
+</div>
